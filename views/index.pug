@@ -1,15 +1,11 @@
 doctype html
 html(lang='en')
   head
-    meta(charset='UTF-8')
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    meta(http-equiv='X-UA-Compatible', content='ie=edge')
-    title Batimagen
-    link(rel='stylesheet', href='css/style.css', type='text/css')
+    include includes/head.pug
   body
     h1 batimagen
     form#uploadForm(ref='uploadForm', action='/upload', method='post', enctype='multipart/form-data')
       input(type='file', name='sampleFile')
       br
       input(type='submit', value='Analizar!')
-    script(type='text/javascript', src='js/app.js')
+    include includes/scripts.pug
