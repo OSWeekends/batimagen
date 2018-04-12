@@ -1,0 +1,35 @@
+{
+  "name": "batimagen",
+  "version": "0.1.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": {
+    "name": "Open Source Weekends. Cibersecurity Guild",
+    "url": "https://osweekends.com"
+  },
+  "contributors": [
+    {
+      "name": "Ulises Gascón",
+      "url": "https://github.com/ulisesGascon"
+    },
+    {
+      "name": "Elena Mateos",
+      "url": "https://github.com/ElenaMLopez"
+    },
+    {
+      "name": "Carlos Crisóstomo Vals (Kr0n0)",
+      "url": "https://github.com/Kr0n0"
+    }
+  ],
+  "license": "GPL-3.0",
+  "dependencies": {
+    "express": "4.16.3",
+    "express-fileupload": "0.4.0",
+    "node-exiftool": "2.3.0",
+    "pug": "2.0.3"
+  }
+}
