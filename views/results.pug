@@ -1,0 +1,20 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    title Batimagen
+    link(rel='stylesheet', href='css/style.css', type='text/css')
+  body
+    h1 batimagen
+    h3 Metadata:
+    ul
+      for field in data
+        each key, value in field
+            li #{value}: #{key}
+      else
+        li sorry, no info!
+    if error
+      strong Error?: #{error}
+    script(type='text/javascript', src='js/app.js')
