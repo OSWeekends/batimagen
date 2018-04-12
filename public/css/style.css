@@ -1,4 +1,18 @@
 body {
     background-color: black;
-    color: white;
+    color: #00ff00;
+    font-family: monospace, sans-serif;
+}
+
+pre {
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+    font-family: Courier New, Courier, monospace;
+    font-size: 7px;
+    line-height: 110%;
+    margin: 0px;
+    overflow: visible;
 }
