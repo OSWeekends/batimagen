@@ -8,5 +8,7 @@ html(lang='en')
     form#uploadForm(ref='uploadForm', action='/upload', method='post', enctype='multipart/form-data')
       input(type='file', name='sampleFile')
       br
+      input(type='url', name='sampleUrl' placeholder="URL?")
+      br
       input(type='submit', value='Analizar!')
     include includes/scripts.pug
