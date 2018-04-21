@@ -1,5 +1,8 @@
 var config = {
-    honeypotMode: true
+    honeypotMode: true,
+    token: {
+        virustotal: "----TOKEN---"
+    }
 }
 
 module.exports = config;
