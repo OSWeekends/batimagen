@@ -6,11 +6,14 @@ html(lang='en')
     include includes/logo.pug
     h3 Metadata:
     ul
-      for field in data
+      for field in data.metadata.data
         each key, value in field
             li #{value}: #{key}
       else
         li sorry, no info!
-    if error
+    if data.metadata.error
       strong Error?: #{error}
+    h3 Vision:
+    pre 
+      code #{JSON.stringify(data.vision, null, 2)}
     include includes/scripts.pug
