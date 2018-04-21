@@ -12,26 +12,26 @@ function metaAnalizer(userFile, requestInfo, cb){
     }
   }
   
-  const ep = new exiftool.ExiftoolProcess()
+  const ep = new exiftool.ExiftoolProcess();
   ep
     .open()
-    .then((pid) => console.log('Started exiftool process %s', pid))
+    .then((pid) => console.log('[info][exiftool] Started: process %s', pid))
     .then(() => ep.readMetadata(`./temp/${userFile.name}`, ['-File:all']))
-    .then(function(metadata, err){
+    .then((metadata, err) => {
         cb(err, metadata)
-        var cleanName = userFile.name.split(".");
+        const cleanName = userFile.name.split(".");
         if(config.honeypotMode) {
           metadata.user_data = userData
         }
-        fs.writeFile(`./temp/${cleanName[0]}.json`, JSON.stringify(metadata, null, 2), "utf8", function(err){
+        fs.writeFile(`./temp/${cleanName[0]}.json`, JSON.stringify(metadata, null, 2), "utf8", err => {
           if(err) {
-            console.log("Error saving the metadata file")
+            console.log("[error][exiftool] saving the metadata file")
           }
         })
 
     })
     .then(() => ep.close())
-    .then(() => console.log('Closed exiftool'))
+    .then(() => console.log('[info][exiftool] Closed exiftool'))
     .catch(console.error)
 }
 
