@@ -3,6 +3,7 @@ const http = require('http'),
     https = require('https'),
     metaAnalizer = require("./meta"),
     visionAnalysis = require("./vision"),
+    virusAnalysis = require("./viral"),
     mime = require('mime-types'),
     imageExtensions = require('image-extensions');
 
@@ -26,6 +27,7 @@ function digestFormFile (req, res, cb){
     data.fullpath = `./temp/${data.filename}`;
     data.mimetype = userFile.mimetype;
     data.extension = mime.extension(userFile.mimetype);
+    data.source = "file"
     fs.writeFile(data.fullpath, userFile.data, "utf8", err => {
         if(err){
             res.status(500).send("Batimagen can't save the user image");
@@ -44,6 +46,8 @@ function digestExternalFile (req, res, cb){
         data.fullpath = `./temp/${data.filename}`;
         data.mimetype = response.headers["content-type"];
         data.extension = mime.extension(response.headers["content-type"]);
+        data.source = "url";
+        data.targetUrl = req.body.sampleUrl;
     	const file = fs.createWriteStream(data.fullpath);
     	response.pipe(file);
         response.on('end', () => {
@@ -66,14 +70,20 @@ function processFile (req, res) {
                 const finalData = {};
                 finalData.metadata = exifData || null;
                 
-                if (imageValidator(fileInfo.extension)) {
-                    visionAnalysis.fullAnalysis(fileInfo.fullpath, allData => {
-                        finalData.vision = allData;
+                virusAnalysis(fileInfo)
+                .then(virusData => {
+                    finalData.virusData = virusData;
+                    if (imageValidator(fileInfo.extension)) {
+                        visionAnalysis.fullAnalysis(fileInfo.fullpath, allData => {
+                            finalData.vision = allData;
+                            res.render('results', {data: finalData});
+                        });
+                    } else {
                         res.render('results', {data: finalData});
-                    });
-                } else {
-                    res.render('results', {data: finalData});
-                }
+                    }
+                    
+                })
+                .catch(error => {console.log("[error][virusAnalysis]", err)})
             });
         });
     }

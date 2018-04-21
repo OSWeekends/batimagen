@@ -13,6 +13,9 @@ html(lang='en')
         li sorry, no info!
     if data.metadata.error
       strong Error?: #{error}
+    h3 Virus:
+    pre 
+      code #{JSON.stringify(data.virusData, null, 2)}
     h3 Vision:
     pre 
       code #{JSON.stringify(data.vision, null, 2)}
