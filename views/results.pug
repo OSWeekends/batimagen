@@ -4,19 +4,107 @@ html(lang='en')
     include includes/head.pug
   body
     include includes/logo.pug
-    h3 Metadata:
+    
+    h2 Metadata:
     ul
       for field in data.metadata.data
         each key, value in field
             li #{value}: #{key}
       else
-        li sorry, no info!
+        li Sorry, no info!
     if data.metadata.error
       strong Error?: #{error}
-    h3 Virus:
-    pre 
-      code #{JSON.stringify(data.virusData, null, 2)}
-    h3 Vision:
-    pre 
-      code #{JSON.stringify(data.vision, null, 2)}
+
+    h2 Virus:    
+    - var virusLink = data.virusData.permalink
+
+    a(href=virusLink)  Analisis de virus en el archivo 
+    br
+    ul
+      for key, value in data.virusData
+        li #{value}: #{key}
+      else
+        li Sorry, no info!
+      if data.virusData.error
+        strong Error?: #{error}
+
+    h2 Vision:    
+    h4 Detected Faces:
+    for field in data.vision.detectFaces
+      each value, key in field
+        ul
+          li #{key}: #{value}
+      else
+            li Sorry, no info!
+      if data.vision.detectFaces.error
+          strong Error?: #{error}
+    h4 Detected Labels:
+    for field in data.vision.detectLabels
+      each value, key in field
+        ul.hidden
+          li #{key}: #{value}
+    else
+          li Sorry, no info!
+    if data.metadata.error
+        strong Error?: #{error}
+    h4 Detected Landmarks:
+    for field in data.vision.detectLandmarks
+      each value, key in field
+        ul
+          li #{key}: #{value}
+    else
+          li Sorry, no info!
+    if data.metadata.error
+              strong Error?: #{error}
+    h4 Detected text:
+    for field in data.vision.detectText
+      each value, key in field
+        ul
+          li #{key}: #{value}  
+    else
+          li Sorry, no info!
+    if data.metadata.error
+        strong Error?: #{error}
+    h4 Detected Logos:
+    for field in data.vision.detectLogos
+      each value, key in field
+        ul
+          li #{key}: #{value}
+    else
+          li Sorry, no info!
+    if data.metadata.error
+        strong Error?: #{error}
+    h4 Detected Properties
+      h5 Dominant Colors:
+      for field in data.vision.detectProperties.dominantColors.colors
+            each value, key in field
+              ul
+                li #{key}: #{value}
+
+    h4 Detected Safe Search 
+    for value, key in data.vision.detectSafeSearch
+        ul
+          li #{key}: #{value}
+    h4 Detected Web Geo 
+    for field in data.vision.detectWebGeo.webEntities
+      hr
+      each value, key in field
+        ul
+          li #{key}: #{value}
+      else
+            li Sorry, no info!
+      if data.metadata.error
+          strong Error?: #{error}
+    
+    h4 Detected Full Text 
+    for field in data.vision.detectText
+      each value, key in field
+        ul
+          li #{key}: #{value}
+    else
+          li Sorry, no info!
+    if data.metadata.error
+        strong Error?: #{error}
+      
+      
     include includes/scripts.pug

@@ -131,3 +131,8 @@ $RECYCLE.BIN/
 
 
 # End of https://www.gitignore.io/api/node,macos,linux,windows
+
+# Elena's stuff
+package.json
+server.js
+experiments.pug
