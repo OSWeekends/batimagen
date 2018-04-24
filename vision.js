@@ -127,17 +127,22 @@ function detectFulltext (fileName) {
 }
 
 function fullAnalysis (file, cb) {
-    const tasks = [detectFaces, detectLabels, detectLandmarks, detectText, detectLogos, detectProperties, detectSafeSearch, detectWebGeo, detectFulltext];
-    const promiseArray = tasks.map(task => {
-        console.log(`[info][vision API] ${task.name}: started`);
-        return task(file)
-    });
-    Promise.all(promiseArray)
-    .then(function(allData){
-        const data = {};
-        allData.forEach((item, index) => data[tasks[index].name] = item);
-        cb(data); 
-    }).catch(err => console.log("[error][vision API]", err));
+    return new Promise(function(resolve, reject){
+        const tasks = [detectFaces, detectLabels, detectLandmarks, detectText, detectLogos, detectProperties, detectSafeSearch, detectWebGeo, detectFulltext];
+        const promiseArray = tasks.map(task => {
+            console.log(`[info][vision API] ${task.name}: started`);
+            return task(file)
+        });
+        Promise.all(promiseArray)
+        .then(function(allData){
+            const data = {};
+            allData.forEach((item, index) => data[tasks[index].name] = item);
+            resolve(data); 
+        }).catch(err => {
+            console.log("[error][vision API]", err)
+            reject(err)
+        });
+    })
 }
 
 module.exports = {detectFaces, detectLabels, detectLandmarks, detectText, detectLogos, detectProperties, detectSafeSearch, detectWebGeo, detectFulltext, fullAnalysis};

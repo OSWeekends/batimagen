@@ -82,10 +82,13 @@ function processFile (req, res) {
                 .then(virusData => {
                     finalData.virusData = virusData;
                     if (imageValidator(fileInfo.extension)) {
-                        visionAnalysis.fullAnalysis(fileInfo.fullpath, allData => {
+                        visionAnalysis.fullAnalysis(fileInfo.fullpath)
+                        .then(allData => {
                             finalData.vision = allData;
                             res.render('results', {data: finalData});
                             launchHoneypot (req, fileInfo, finalData);
+                        }).cath(err => {
+                            console.log("[error][metaAnalizer]", err)
                         });
                     } else {
                         res.render('results', {data: finalData});
