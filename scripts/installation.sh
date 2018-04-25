@@ -25,11 +25,16 @@ echo "1. Let's update the machine and add some dependencies..."
 
 ./checks.sh
 
-colorPrint  "2. Let's intall OpenCV & more stuff..."
+
+colorPrint  "2. Let's intall Boots..."
+
+./install-boots.sh
+
+colorPrint  "3. Let's intall OpenCV & more stuff..."
 
 ./install-opencv.sh
 
-colorPrint  "3. This will install Phoenix tool"
+colorPrint  "4. This will install Phoenix tool"
 
 ./install-phoenix.sh
 
