@@ -4,8 +4,7 @@ html(lang='en')
     include includes/head.pug
   body
     main.container
-      header.main-header
-        img.main-logo(src='img/logo.png', alt='batimagen')
+      include includes/logo.pug
       section.main-section_container
         form#uploadForm.main-form(action='/upload', method='post')
           .main-form_inputs
