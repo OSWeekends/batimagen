@@ -9,8 +9,8 @@ for field in data.vision.detectFaces
         - // @Todo: Refactor for CamelCase logic. see: underExposedLikelihood
         - key = key.replace("Likelihood", " likelihood");
         li #{key}: #{value}
-    else
-      li Sorry, no info!
+else
+  li Sorry, no info!
 if data.vision.detectFaces.error
       strong Error?: #{error}
 

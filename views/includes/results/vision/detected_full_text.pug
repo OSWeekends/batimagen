@@ -1,8 +1,7 @@
 
 h4 Detected Full Text 
-for field in data.vision.detectText
-  each value, key in field
-    ul
-      li #{key}: #{value}
+- var text = data.vision.detectText[0]
+if text 
+  p  [#{text.locale}] #{text.description}
 else
-      li Sorry, no info!
+  li Sorry, no info!
