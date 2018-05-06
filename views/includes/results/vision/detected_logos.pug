@@ -1,0 +1,7 @@
+h4 Detected Logos:
+for field in data.vision.detectLogos
+  each value, key in field
+    ul
+      li #{key}: #{value}
+else
+      li Sorry, no info!

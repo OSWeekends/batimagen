@@ -1,0 +1,6 @@
+h4 Detected Web Geo 
+ul
+for field in data.vision.detectWebGeo.webEntities
+  li #{field.description} (#{field.score.toFixed(3)}%)
+else
+  strong Sorry, no info!

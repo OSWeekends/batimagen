@@ -1,78 +1,21 @@
-h2 Vision:    
-h4 Detected Faces:
-for field in data.vision.detectFaces
-  each value, key in field
-    ul
-      li #{key}: #{value}
-  else
-        li Sorry, no info!
-if data.vision.detectFaces.error
-      strong Error?: #{error}
-h4 Detected Labels:
-for field in data.vision.detectLabels
-  each value, key in field
-    ul.hidden
-      li #{key}: #{value}
-else
-      li Sorry, no info!
-if data.metadata.error
-    strong Error?: #{error}
-h4 Detected Landmarks:
-for field in data.vision.detectLandmarks
-  each value, key in field
-    ul
-      li #{key}: #{value}
-else
-      li Sorry, no info!
-if data.metadata.error
-          strong Error?: #{error}
-h4 Detected text:
-for field in data.vision.detectText
-  each value, key in field
-    ul
-      li #{key}: #{value}  
-else
-      li Sorry, no info!
-if data.metadata.error
-    strong Error?: #{error}
-h4 Detected Logos:
-for field in data.vision.detectLogos
-  each value, key in field
-    ul
-      li #{key}: #{value}
-else
-      li Sorry, no info!
-if data.metadata.error
-    strong Error?: #{error}
-h4 Detected Properties
-  h5 Dominant Colors:
-  for field in data.vision.detectProperties.dominantColors.colors
-        each value, key in field
-          ul
-            li #{key}: #{value}
+h2 Vision:
 
-h4 Detected Safe Search 
-for value, key in data.vision.detectSafeSearch
-    ul
-      li #{key}: #{value}
-h4 Detected Web Geo 
-for field in data.vision.detectWebGeo.webEntities
-  hr
-  each value, key in field
-    ul
-      li #{key}: #{value}
-  else
-        li Sorry, no info!
-  if data.metadata.error
-      strong Error?: #{error}
+include vision/detected_faces.pug
+//include vision/detected_labels.pug
+include vision/detected_landmarks.pug
+include vision/detected_text.pug
+include vision/detected_logos.pug
+include vision/detected_properties.pug
+include vision/detected_safe_search.pug
+include vision/detected_web_geo.pug
+include vision/detected_full_text.pug
 
-h4 Detected Full Text 
-for field in data.vision.detectText
-  each value, key in field
-    ul
-      li #{key}: #{value}
-else
-      li Sorry, no info!
-if data.metadata.error
-    strong Error?: #{error}
+
+
+
+
+
+
+
+
   

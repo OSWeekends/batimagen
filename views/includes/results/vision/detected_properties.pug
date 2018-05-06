@@ -1,0 +1,6 @@
+h4 Detected Properties
+  h5 Dominant Colors:
+  for field in data.vision.detectProperties.dominantColors.colors
+        each value, key in field
+          ul
+            li #{key}: #{value}
