@@ -3,12 +3,23 @@ html(lang='en')
   head
     include includes/head.pug
   body
-    include includes/logo.pug
-    p Pick an image from your disk and discover the metadata attached to it
-    form#uploadForm(ref='uploadForm', action='/upload', method='post', enctype='multipart/form-data')
-      input(type='file', name='sampleFile')
-      br
-      input(type='url', name='sampleUrl' placeholder="URL?")
-      br
-      input(type='submit', value='Analizar!')
+    main.container
+      header.main-header
+        img.main-logo(src='img/logo.png', alt='batimagen')
+      section.main-section_container
+        form#uploadForm.main-form(action='/upload', method='post')
+          .main-form_inputs
+            input.custom-input.upload-input(type='file', name='sampleFile', value='', placeholder='Upload file')
+            input.custom-input(type='url', name='sampleUrl', value='', placeholder='Analysis from URL', pattern='')
+          button.submit-button(type='submit', name='button')  Analize 
+      aside.disclaimer
+        p
+          |Exención de responsabilidad: Este proyecto tiene la intención de sensibilizar al usuario sobre la ciberseguridad, la prevención y la detección del uso no autorizado de los sistemas informáticos.
+
+        p
+          |El usuario al aplicar estos conocimientos deberá tener en cuenta que hay que respetar las normas que regulan la seguridad informática, evitando la comisión de actos que no se ajusten a la legalidad vigente, siendo su responsabilidad el mal uso que haga de este proyecto.
+
+        p
+          |Los desarrolladores del proyecto no se hace responsables del uso negligente o ilícito que puedan hacer los usuarios con los conocimientos que se ponen de manifiesto en este proyecto.
+      include includes/footer.pug
     include includes/scripts.pug
