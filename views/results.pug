@@ -6,9 +6,12 @@ html(lang='en')
     // include includes/logo.pug 
     main.container
       include includes/logo.pug
-      include includes/results/metadata.pug
-      include includes/results/virus.pug
-      include includes/results/vision.pug
-      include includes/results/forensic.pug
+      section.result-container
+        article.vision-results
+          include includes/results/metadata.pug
+          include includes/results/virus.pug
+          include includes/results/vision.pug
+        article.forensic-results
+          include includes/results/forensic.pug
       
     include includes/scripts.pug
