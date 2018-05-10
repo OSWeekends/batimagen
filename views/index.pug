@@ -8,8 +8,9 @@ html(lang='en')
       section.main-section_container
         form#uploadForm.main-form(action='/upload', method='post')
           .main-form_inputs
-            input.custom-input.upload-input(type='file', name='sampleFile', value='', placeholder='Upload file')
-            input.custom-input(type='url', name='sampleUrl', value='', placeholder='Analysis from URL', pattern='')
+            label.custom-label(for='uploadFile')  Upload File 
+            input#uploadFile.custom-input.upload-input(type='file', name='sampleFile', value='', placeholder='Upload file')
+            input#analizeUrl.custom-input.input-url(type='url', name='sampleUrl', value='', placeholder='Analysis from URL', pattern='')
           button.submit-button(type='submit', name='button')  Analize 
       aside.disclaimer
         p
@@ -20,5 +21,11 @@ html(lang='en')
 
         p
           |Los desarrolladores del proyecto no se hace responsables del uso negligente o ilícito que puedan hacer los usuarios con los conocimientos que se ponen de manifiesto en este proyecto.
+        p
+          |Disclaimer: This project is intended to sensitize the user about cybersecurity, prevention and detection of unauthorized use of computer systems.
+        p
+          |The user when applying this knowledge must take into account that the rules that regulate computer security must be respected, avoiding the commission of acts that do not comply with the current legislation, being its responsibility the misuse of this project.
+        p
+          |The developers of the project are not responsible for the negligent or illicit use that users can make with the knowledge that is revealed in this project.
       include includes/footer.pug
     include includes/scripts.pug

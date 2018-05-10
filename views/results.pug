@@ -6,6 +6,12 @@ html(lang='en')
     // include includes/logo.pug 
     main.container
       include includes/logo.pug
+      nav.results-nav_container
+        ul.results-nav_list
+          li.results-nav_element
+            button(type='button', name='button')  METADATA 
+          li.results-nav_element
+            button(type='button', name='button')  FORENSIC 
       section.result-container
         article.vision-results
           include includes/results/metadata.pug
@@ -13,5 +19,6 @@ html(lang='en')
           include includes/results/vision.pug
         article.forensic-results
           include includes/results/forensic.pug
-      
+          
+      include includes/footer.pug
     include includes/scripts.pug
