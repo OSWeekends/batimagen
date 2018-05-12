@@ -13,11 +13,11 @@ html(lang='en')
           li.results-nav_element
             button.inactive(type='button', name='button')  FORENSIC 
       section.result-container
-        article.vision-results
+        article.vision-results.hidden
           include includes/results/metadata.pug
           include includes/results/virus.pug
           include includes/results/vision.pug
-        article.forensic-results.hidden
+        article.forensic-results
           include includes/results/forensic.pug
           
     include includes/footer.pug

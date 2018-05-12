@@ -29,16 +29,15 @@ a:hover {
 }
 
 .main-header {
+  background-image: url('../img/logo.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
   height: 250px;
   overflow: hidden;
   width: 100%;
 }
 
-.main-logo {
-  display: block;
-  margin: 0 auto;
-  width: 100%
-}
 .main-section_container {
   margin: 20px auto;
 }
