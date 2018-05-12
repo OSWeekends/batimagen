@@ -10,7 +10,8 @@ for field in data.vision.detectFaces
         - key = key.replace("Likelihood", " likelihood");
         li #{key}: #{value}
 else
-  li Sorry, no info!
+  ul
+    li Sorry, no info!
 if data.vision.detectFaces.error
       strong Error?: #{error}
 

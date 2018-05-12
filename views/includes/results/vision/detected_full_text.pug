@@ -2,6 +2,7 @@
 h4 Detected Full Text 
 - var text = data.vision.detectText[0]
 if text 
-  p  [#{text.locale}] #{text.description}
+  p.detect-text  [#{text.locale}] #{text.description}
 else
-  li Sorry, no info!
+  ul
+    li.detect-text Sorry, no info!

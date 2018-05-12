@@ -1,5 +1,9 @@
 /* --- --- RESULTS --- --- */
 
+.container {
+  padding: 0 10px;
+}
+
 /*   NAV   */
 .results-nav_container {
   border-bottom: 2px dashed #00FF00;
@@ -27,3 +31,12 @@
   width: 100%;
 }
 /* --- end nav --- */
+ul > li {
+  list-style-image: url("../img/right-arrow.svg");
+}
+
+
+/*   DETECTETD TEXT SECTION   */
+.detect-text {
+  margin-bottom: 60px;
+}
