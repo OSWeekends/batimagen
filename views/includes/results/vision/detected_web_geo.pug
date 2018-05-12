@@ -11,7 +11,7 @@ h5 Full Match Images at Web:
 ul
 for field in data.vision.detectWebGeo.fullMatchingImages
   li 
-    a(href='#{field.url}') #{field.url}
+    a(href=field.url target='_blank') #{field.url}
 else
   strong Sorry, no info!
 
@@ -27,7 +27,7 @@ h5 Pages With Matching Images:
 ul
 for field in data.vision.detectWebGeo.pagesWithMatchingImages
   li 
-    a(href='#{field.url}') #{field.url}
+    a(href=field.url target='_blank') #{field.url}
 else
   strong Sorry, no info!
 
@@ -35,7 +35,7 @@ h5 Visually Similar Images:
 ul
 for field in data.vision.detectWebGeo.visuallySimilarImages
   li 
-    a(href='#{field.url}') #{field.url}
+    a(href=field.url target='_blank') #{field.url}
 else
   strong Sorry, no info!
   
