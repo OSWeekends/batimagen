@@ -5,18 +5,20 @@ p
 div.forensic-results_container
   nav.foresic-nav
     ul
-    li.foresic-nav_element
-      button.foresic-element_button(data-image='_ela', type='button', name='button')  ELA (Error Level Analysis) 
-    li.foresic-nav_element
-      button.foresic-element_button(data-image='_lg', type='button', name='button')  LG (Luminance Gradient) 
-    li.foresic-nav_element
-      button.foresic-element_button(data-image='_avgdist', type='button', name='button')  AVGDIST (Average-Distance of Neighbor Pixels) 
-    li.foresic-nav_element
-      button.foresic-element_button(data-image='_copymove', type='button', name='button')  Copy-Move Detection 
-    li.foresic-nav_element
-      button.foresic-element_button(data-image='_hsv', type='button', name='button')  HSV Colorspace Histogram 
-    li.foresic-nav_element
-      button.foresic-element_button(data-image='_lab_fast', type='button', name='button')  Lab Colorspace Histogram 
+      li.foresic-nav_element
+        button.foresic-element_button(data-image='_ela', type='button', name='button')  Original 
+      li.foresic-nav_element
+        button.foresic-element_button(data-image='_ela', type='button', name='button')  ELA (Error Level Analysis) 
+      li.foresic-nav_element
+        button.foresic-element_button(data-image='_lg', type='button', name='button')  LG (Luminance Gradient) 
+      li.foresic-nav_element
+        button.foresic-element_button(data-image='_avgdist', type='button', name='button')  AVGDIST (Average-Distance of Neighbor Pixels) 
+      li.foresic-nav_element
+        button.foresic-element_button(data-image='_copymove', type='button', name='button')  Copy-Move Detection 
+      li.foresic-nav_element
+        button.foresic-element_button(data-image='_hsv', type='button', name='button')  HSV Colorspace Histogram 
+      li.foresic-nav_element
+        button.foresic-element_button(data-image='_lab_fast', type='button', name='button')  Lab Colorspace Histogram 
   .forensic-analysis
     img.forensic-image(src='../../../temp/forensic/bbv_ela.png', alt='forensic image analized')
 script

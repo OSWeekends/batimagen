@@ -26,13 +26,20 @@ ul > li {
   width: 45%;
 }
 .results-nav_element > button {
-  background-color: #00FF00;
-  border: 0;
+  background-color: black;
+  border: 2px solid #00FF00;
+  color: #00FF00;
+  cursor: crosshair;
   font-size: 1.2em;
   font-weight: bold;
   height: 60px;
   width: 100%;
 }
+.results-nav_element > button:hover {
+  background-color: #00FF00;
+  color: black;
+}
+
 /* --- end nav --- */
 /*   RESULTS CONTAINER   */
 .result-container {
@@ -49,6 +56,9 @@ ul > li {
   padding: 5px;
   width: calc(100% - 10px);
   word-wrap: break-word;
+}
+.forensic-results {
+  display: none;
 }
 
 /*   DETECTETD TEXT SECTION   */

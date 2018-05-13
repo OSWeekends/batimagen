@@ -9,15 +9,15 @@ html(lang='en')
       nav.results-nav_container
         ul.results-nav_list
           li.results-nav_element
-            button(type='button', name='button')  METADATA 
+            button#metadaraBtn.tab-button(type='button', name='button')  METADATA 
           li.results-nav_element
-            button.inactive(type='button', name='button')  FORENSIC 
+            button#forensicBtn.inactive(type='button', name='button')  FORENSIC 
       section.result-container
-        article.vision-results.hidden
+        article#visionResults.vision-results
           include includes/results/metadata.pug
           include includes/results/virus.pug
           include includes/results/vision.pug
-        article.forensic-results
+        article#forensicResults.forensic-results
           include includes/results/forensic.pug
           
     include includes/footer.pug
