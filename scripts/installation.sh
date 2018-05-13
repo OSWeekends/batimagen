@@ -25,7 +25,6 @@ echo "1. Let's update the machine and add some dependencies..."
 
 ./checks.sh
 
-
 colorPrint  "2. Let's intall Boots..."
 
 ./install-boots.sh
@@ -40,5 +39,3 @@ colorPrint  "4. This will install Phoenix tool"
 
 colorPrint "All installed sucessfully!"
 colorPrint "Please add your tokens and credentials as explained in the Readme.md before start the server..."
-# ./phoenix/build/phoenix
-

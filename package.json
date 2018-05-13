@@ -4,7 +4,7 @@
   "description": "Un proyecto sobre metadatos del guild de ciberseguridad",
   "main": "server.js",
   "scripts": {
-    "install-dependencies": "chmod +x scripts/* && cd scripts && sudo ./installation.sh",
+    "install-dependencies": "chmod +x scripts/*.sh && cd scripts && sudo ./installation.sh",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run install-dependencies && npm run tokens && node server.js",
     "tokens": "export GOOGLE_APPLICATION_CREDENTIALS='./SECRET_gcloud.json'"
