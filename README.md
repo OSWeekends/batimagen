@@ -89,10 +89,17 @@ Solo necesitas tener Node y descargarte [exiftool](https://www.sno.phy.queensu.c
 
 Ahora mismo estamos en desarrollo activo del primer MVP (Sprint 1 y 0 en paralelo)
 
+### Exención de responsabilidad
+
+Este proyecto tiene la intención de sensibilizar al usuario sobre la ciberseguridad, la prevención y la detección del uso no autorizado de los sistemas informáticos.
+
+El usuario al aplicar estos conocimientos deberá tener en cuenta que hay que respetar las normas que regulan la seguridad informática, evitando la comisión de actos que no se ajusten a la legalidad vigente, siendo su responsabilidad el mal uso que haga de este proyecto.
+
+Los desarrolladores del proyecto no se hace responsables del uso negligente o ilícito que puedan hacer los usuarios con los conocimientos que se ponen de manifiesto en este proyecto.
+
 ### Licencia
 
 GPL-3.0
-
 
 
 ![footer](.osweekends/img/OSW-project-GitHub-template-footer.jpg)
