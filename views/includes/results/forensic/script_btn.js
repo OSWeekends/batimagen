@@ -16,6 +16,10 @@
         });
       }
 */
+/**
+  * gestion de renderizado de diferentes fotos para forense
+  * al pulsar diferentes botones
+*/
 const extension = ['.jpg', '.png','.tiff', '.gif', '.bmp'];
 let archive = "cucu.txt",
     newArchive = '',
