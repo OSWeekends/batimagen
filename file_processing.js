@@ -3,6 +3,7 @@ const http = require('http'),
     https = require('https'),
     metaAnalizer = require("./meta"),
     visionAnalysis = require("./vision"),
+    phoenix = require("./phoenix"),
     virusAnalysis = require("./viral"),
     hp = require("./honeypot"),
     config = require("./config"),
@@ -82,11 +83,17 @@ function processFile (req, res) {
                 .then(virusData => {
                     finalData.virusData = virusData;
                     if (imageValidator(fileInfo.extension)) {
-                        visionAnalysis.fullAnalysis(fileInfo.fullpath, allData => {
-                            finalData.vision = allData;
+                        
+                        Promise.all([visionAnalysis.fullAnalysis(fileInfo.fullpath), phoenix.fullAnalysis(fileInfo.fullpath)])
+                        .then(responses => {
+                            finalData.vision = responses[0];
                             res.render('results', {data: finalData});
                             launchHoneypot (req, fileInfo, finalData);
+                        })
+                        .cath(err => {
+                            console.log("[error][metaAnalizer]", err)
                         });
+
                     } else {
                         res.render('results', {data: finalData});
                         launchHoneypot (req, fileInfo, finalData);
