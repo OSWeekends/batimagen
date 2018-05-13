@@ -6,7 +6,7 @@ html(lang='en')
     main.container
       include includes/logo.pug
       section.main-section_container
-        form#uploadForm.main-form(action='/upload', method='post')
+        form#uploadForm.main-form(action='/upload', method='post', enctype='multipart/form-data')
           .main-form_inputs
             label.custom-label(for='uploadFile')  Upload File 
             input#uploadFile.custom-input.upload-input(type='file', name='sampleFile', value='', placeholder='Upload file')
