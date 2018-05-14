@@ -43,6 +43,7 @@ a:hover {
 }
 
 .main-form_inputs {
+  align-items: center;
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
@@ -58,13 +59,16 @@ a:hover {
   color: inherit;
   cursor: crosshair;
   display: block;
-  font-size: 1.5em;
+  font-size: 1.2em;
   padding: 5px 10px;
+  text-align: center;
+  text-transform: uppercase;
   height: 60px;
 }
 
 .custom-input,
 .custom-label {
+  background-color: rgba(0,255,0,.25);
   width: 45%;
 }
 .custom-label {
@@ -85,7 +89,7 @@ input[type=file] {
     opacity: 0;
     outline: none;
     cursor: inherit;
-    display: block;
+    display: none;
 }
 
 
@@ -100,8 +104,8 @@ input[type=file] {
 }
 .disclaimer {
   font-size: .8em;
-  line-height: 1em;
-  margin: 10px auto 80px auto;
+  line-height: 1.5em;
+  margin: 100px auto 80px auto;
   text-align: justify;
   width: 90%;
 }

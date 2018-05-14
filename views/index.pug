@@ -10,7 +10,8 @@ html(lang='en')
           .main-form_inputs
             label.custom-label(for='uploadFile')  Upload File 
             input#uploadFile.custom-input.upload-input(type='file', name='sampleFile', value='', placeholder='Upload file')
-            input#analizeUrl.custom-input.input-url(type='url', name='sampleUrl', value='', placeholder='Analysis from URL', pattern='')
+            span OR
+            input#analizeUrl.custom-input.input-url(type='url', name='sampleUrl', value='', placeholder='Analysis from URL')
           button.submit-button(type='submit', name='button')  Analize 
       aside.disclaimer
         p
