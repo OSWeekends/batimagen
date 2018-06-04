@@ -9,6 +9,4 @@ function updateImg (data) {
 	} else {
 		targetImg.src = `forensic/${originalImg}`;
 	}
-
-	console.log(originalImg);
 };
