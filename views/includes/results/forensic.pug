@@ -6,7 +6,7 @@ div.forensic-results_container
   nav.foresic-nav
     ul
       li.foresic-nav_element
-        button.foresic-element_button(onclick="updateImg(this, 'original')", type='button', name='button')  Original 
+        button.foresic-element_button.active-button(onclick="updateImg(this, 'original')", type='button', name='button')  Original 
       li.foresic-nav_element
         button.foresic-element_button(onclick="updateImg(this, '_ela')", type='button', name='button')  ELA (Error Level Analysis) 
       li.foresic-nav_element
@@ -18,9 +18,10 @@ div.forensic-results_container
       li.foresic-nav_element
         button.foresic-element_button(onclick="updateImg(this, '_hsv')", type='button', name='button')  HSV Colorspace Histogram 
       li.foresic-nav_element
-        button.foresic-element_button(onclick="updateImg(this, '_lab_fast')", type='button', name='button')  Lab Colorspace Histogram 
+        button.foresic-element_button(onclick="updateImg(this, '_lab')", type='button', name='button')  Lab Colorspace Histogram 
   .forensic-analysis
     img.forensic-image(data-image-original=data.details.name, src="forensic/" + data.details.name, alt='forensic image analized')
 script
   include forensic/script_btn.js
   
+
