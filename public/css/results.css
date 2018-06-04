@@ -40,6 +40,7 @@ ul > li {
   color: black;
 }
 
+
 /* --- end nav --- */
 /*   RESULTS CONTAINER   */
 .result-container {
@@ -107,4 +108,18 @@ ul > li {
 }
 .forensic-image {
   width: 100%;
+}
+
+.active-button{
+  background-color: #00FF00;
+  color: black;
+}
+
+.vision-results ul > li > a {
+    padding: 0 5px;
+}
+.vision-results ul > li > a:hover {
+  background-color: #00FF00;
+  color: black;
+  cursor: crosshair;
 }

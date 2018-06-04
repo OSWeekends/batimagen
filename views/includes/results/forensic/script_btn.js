@@ -1,5 +1,6 @@
 
-function updateImg (data) {
+function updateImg (e, data) {
+	const buttons = document.querySelectorAll("foresic-nav_element")
 	const targetImg = document.querySelector(".forensic-image");
 	const originalImg = targetImg.getAttribute("data-image-original");
 	
@@ -9,4 +10,12 @@ function updateImg (data) {
 	} else {
 		targetImg.src = `forensic/${originalImg}`;
 	}
+	
+	// Clean Active class in buttons
+	for (var i = buttons.length; i--; ) {
+		buttons[i].classList.remove("active-button");
+	}
+	// Add class to current button
+	e.classList.add("active-button")
+	
 };
