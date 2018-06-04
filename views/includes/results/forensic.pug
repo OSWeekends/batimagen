@@ -6,21 +6,21 @@ div.forensic-results_container
   nav.foresic-nav
     ul
       li.foresic-nav_element
-        button.foresic-element_button(data-image='_ela', type='button', name='button')  Original 
+        button.foresic-element_button(onclick="updateImg('original')", type='button', name='button')  Original 
       li.foresic-nav_element
-        button.foresic-element_button(data-image='_ela', type='button', name='button')  ELA (Error Level Analysis) 
+        button.foresic-element_button(onclick="updateImg('_ela')", type='button', name='button')  ELA (Error Level Analysis) 
       li.foresic-nav_element
-        button.foresic-element_button(data-image='_lg', type='button', name='button')  LG (Luminance Gradient) 
+        button.foresic-element_button(onclick="updateImg('_lg')", type='button', name='button')  LG (Luminance Gradient) 
       li.foresic-nav_element
-        button.foresic-element_button(data-image='_avgdist', type='button', name='button')  AVGDIST (Average-Distance of Neighbor Pixels) 
+        button.foresic-element_button(onclick="updateImg('_avgdist')", type='button', name='button')  AVGDIST (Average-Distance of Neighbor Pixels) 
       li.foresic-nav_element
-        button.foresic-element_button(data-image='_copymove', type='button', name='button')  Copy-Move Detection 
+        button.foresic-element_button(onclick="updateImg('_copymove')", type='button', name='button')  Copy-Move Detection 
       li.foresic-nav_element
-        button.foresic-element_button(data-image='_hsv', type='button', name='button')  HSV Colorspace Histogram 
+        button.foresic-element_button(onclick="updateImg('_hsv')", type='button', name='button')  HSV Colorspace Histogram 
       li.foresic-nav_element
-        button.foresic-element_button(data-image='_lab_fast', type='button', name='button')  Lab Colorspace Histogram 
+        button.foresic-element_button(onclick="updateImg('_lab_fast')", type='button', name='button')  Lab Colorspace Histogram 
   .forensic-analysis
-    img.forensic-image(src='../../../temp/forensic/bbv_ela.png', alt='forensic image analized')
+    img.forensic-image(data-image-original=data.details.name, src="forensic/" + data.details.name, alt='forensic image analized')
 script
   include forensic/script_btn.js
   

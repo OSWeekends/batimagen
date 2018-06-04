@@ -8,6 +8,7 @@ const port = process.env.PORT || 3000;
 
 // Middelware
 app.use(express.static('public'));
+app.use("/forensic", express.static(__dirname + '/temp'));
 app.use(fileUpload());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set('view engine', 'pug');

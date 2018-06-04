@@ -9,8 +9,8 @@ Otro no seleccionado
 Oculta info del otro tab
 */
 let metadaraBtn = document.getElementById('metadaraBtn'),
-    forensicBtn = document.getElementById('forensicBtn');
-    visionResults = document.getElementById('visionResults');
+    forensicBtn = document.getElementById('forensicBtn'),
+    visionResults = document.getElementById('visionResults'),
     forensicResults = document.getElementById('forensicResults');
 
 function display(button) {

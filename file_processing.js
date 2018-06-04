@@ -76,7 +76,9 @@ function processFile (req, res) {
             metaAnalizer({name: fileInfo.filename}, req, (err, exifData) => {
                 if(err) console.log("[error][metaAnalizer]", err);
                 
-                const finalData = {};
+                const finalData = {
+                    details: {name: fileInfo.filename}
+                };
                 finalData.metadata = exifData || null;
                 
                 virusAnalysis(fileInfo)
