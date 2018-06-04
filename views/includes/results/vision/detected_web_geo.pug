@@ -1,0 +1,47 @@
+pre 
+  code /***************************************************************************/
+h4 Detected Web Geo 
+ul
+  for field in data.vision.detectWebGeo.webEntities
+    li #{field.description} (#{field.score.toFixed(3)}%)
+  else
+    strong Sorry, no info!
+  
+h5 Full Match Images at Web:
+ul
+  for field in data.vision.detectWebGeo.fullMatchingImages
+    li 
+      a(href=field.url target='_blank') #{field.url}
+  else
+    strong Sorry, no info!
+
+h5 Partial Match Images at Web:
+ul
+  for field in data.vision.detectWebGeo.partialMatchingImages
+    li 
+      a(href=field.url target='_blank') #{field.url}
+  else
+    strong Sorry, no info!
+
+h5 Pages With Matching Images:
+ul
+  for field in data.vision.detectWebGeo.pagesWithMatchingImages
+    li 
+      a(href=field.url target='_blank') #{field.url}
+  else
+    strong Sorry, no info!
+
+h5 Visually Similar Images:
+ul
+  for field in data.vision.detectWebGeo.visuallySimilarImages
+    li 
+      a(href=field.url target='_blank') #{field.url}
+  else
+    strong Sorry, no info!
+  
+h5 Best Guess Labels:
+ul
+  for field in data.vision.detectWebGeo.bestGuessLabels
+    li Label: #{field.label} | Language Code : #{field.languageCode}
+  else
+    strong Sorry, no info!

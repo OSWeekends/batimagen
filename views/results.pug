@@ -3,20 +3,22 @@ html(lang='en')
   head
     include includes/head.pug
   body
-    include includes/logo.pug
-    h3 Metadata:
-    ul
-      for field in data.metadata.data
-        each key, value in field
-            li #{value}: #{key}
-      else
-        li sorry, no info!
-    if data.metadata.error
-      strong Error?: #{error}
-    h3 Virus:
-    pre 
-      code #{JSON.stringify(data.virusData, null, 2)}
-    h3 Vision:
-    pre 
-      code #{JSON.stringify(data.vision, null, 2)}
+    // include includes/logo.pug 
+    main.container
+      include includes/logo.pug
+      nav.results-nav_container
+        ul.results-nav_list
+          li.results-nav_element
+            button#metadaraBtn.tab-button(type='button', name='button')  METADATA 
+          li.results-nav_element
+            button#forensicBtn.inactive(type='button', name='button')  FORENSIC 
+      section.result-container
+        article#visionResults.vision-results
+          include includes/results/metadata.pug
+          include includes/results/virus.pug
+          include includes/results/vision.pug
+        article#forensicResults.forensic-results
+          include includes/results/forensic.pug
+          
+    include includes/footer.pug
     include includes/scripts.pug

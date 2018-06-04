@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Capa_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 490 490"
+   style="enable-background:new 0 0 490 490;"
+   xml:space="preserve"
+   width="10px"
+   height="10px"
+   sodipodi:docname="right-arrow.svg"
+   inkscape:version="0.92.3 (3ce5693, 2018-03-11)"><metadata
+   id="metadata73"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+   id="defs71"><filter
+     inkscape:label="Matte Bevel"
+     inkscape:menu="Bevels"
+     inkscape:menu-tooltip="Soft, pastel-colored, blurry bevel"
+     x="-0.25"
+     y="-0.25"
+     width="1.5"
+     height="1.5"
+     style="color-interpolation-filters:sRGB;"
+     id="filter3902"><feGaussianBlur
+       stdDeviation="1"
+       result="result6"
+       id="feGaussianBlur3878" /><feComposite
+       operator="in"
+       in="result6"
+       in2="result6"
+       result="result7"
+       id="feComposite3880" /><feGaussianBlur
+       stdDeviation="8"
+       result="result3"
+       in="result7"
+       id="feGaussianBlur3882" /><feComposite
+       in2="result7"
+       operator="over"
+       result="result91"
+       id="feComposite3884" /><feComposite
+       operator="in"
+       in="result3"
+       result="result5"
+       in2="result91"
+       id="feComposite3886" /><feColorMatrix
+       values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0 "
+       result="result4"
+       id="feColorMatrix3888" /><feSpecularLighting
+       surfaceScale="3"
+       specularConstant="2"
+       specularExponent="45"
+       in="result4"
+       result="result11"
+       id="feSpecularLighting3892"><fePointLight
+         x="-5000"
+         y="-10000"
+         z="20000"
+         id="fePointLight3890" /></feSpecularLighting><feComposite
+       operator="arithmetic"
+       k1="1"
+       in2="result4"
+       result="result10"
+       id="feComposite3894" /><feComposite
+       operator="arithmetic"
+       k2="0.5"
+       k3="1"
+       in="result5"
+       result="result8"
+       in2="result10"
+       id="feComposite3896" /><feComposite
+       result="result9"
+       in2="result8"
+       id="feComposite3898" /><feBlend
+       mode="normal"
+       in2="result9"
+       id="feBlend3900" /></filter></defs><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="1535"
+   inkscape:window-height="876"
+   id="namedview69"
+   showgrid="false"
+   inkscape:zoom="0.4609375"
+   inkscape:cx="-139.9322"
+   inkscape:cy="256"
+   inkscape:window-x="65"
+   inkscape:window-y="24"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Capa_1" />
+<g
+   id="g36"
+   style="filter:url(#filter3902)">
+	<g
+   id="g4">
+		<path
+   d="M0,480.086L150.771,245L0,9.914L490,245L0,480.086z"
+   fill="#00ff00"
+   id="path2" />
+	</g>
+	<g
+   id="g6">
+	</g>
+	<g
+   id="g8">
+	</g>
+	<g
+   id="g10">
+	</g>
+	<g
+   id="g12">
+	</g>
+	<g
+   id="g14">
+	</g>
+	<g
+   id="g16">
+	</g>
+	<g
+   id="g18">
+	</g>
+	<g
+   id="g20">
+	</g>
+	<g
+   id="g22">
+	</g>
+	<g
+   id="g24">
+	</g>
+	<g
+   id="g26">
+	</g>
+	<g
+   id="g28">
+	</g>
+	<g
+   id="g30">
+	</g>
+	<g
+   id="g32">
+	</g>
+	<g
+   id="g34">
+	</g>
+</g>
+<g
+   id="g38">
+</g>
+<g
+   id="g40">
+</g>
+<g
+   id="g42">
+</g>
+<g
+   id="g44">
+</g>
+<g
+   id="g46">
+</g>
+<g
+   id="g48">
+</g>
+<g
+   id="g50">
+</g>
+<g
+   id="g52">
+</g>
+<g
+   id="g54">
+</g>
+<g
+   id="g56">
+</g>
+<g
+   id="g58">
+</g>
+<g
+   id="g60">
+</g>
+<g
+   id="g62">
+</g>
+<g
+   id="g64">
+</g>
+<g
+   id="g66">
+</g>
+</svg>
