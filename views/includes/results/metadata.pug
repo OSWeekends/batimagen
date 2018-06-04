@@ -1,0 +1,9 @@
+h2 Metadata:
+ul
+  for field in data.metadata.data
+    each key, value in field
+        li #{value}: #{key}
+  else
+    li Sorry, no info!
+if data.metadata.error
+  strong Error?: #{error}

@@ -1,0 +1,19 @@
+h4 Detected Faces:
+for field in data.vision.detectFaces
+  - var relevants = ["joyLikelihood", "sorrowLikelihood", "angerLikelihood", "surpriseLikelihood", "underExposedLikelihood", "blurredLikelihood", "headwearLikelihood"]
+  - function isRelevant(item){return relevants.indexOf(item) !== -1}
+  ul
+    each value, key in field
+      if isRelevant(key)
+        - value = value.toLowerCase().replace("_", " ");
+        - // @Todo: Refactor for CamelCase logic. see: underExposedLikelihood
+        - key = key.replace("Likelihood", " likelihood");
+        li #{key}: #{value}
+else
+  ul
+    li Sorry, no info!
+if data.vision.detectFaces.error
+      strong Error?: #{error}
+
+
+      

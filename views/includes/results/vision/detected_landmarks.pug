@@ -1,0 +1,8 @@
+h4 Detected Landmarks:
+for field in data.vision.detectLandmarks
+  each value, key in field
+    ul
+      li #{key}: #{value}
+else
+    ul
+      li Sorry, no info!
