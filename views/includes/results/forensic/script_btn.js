@@ -2,7 +2,7 @@ function updateImg (e, data) {
 	const buttons = document.getElementsByClassName("foresic-element_button");
 	const targetImg = document.querySelector(".forensic-image");
 	const originalImg = targetImg.getAttribute("data-image-original");
-
+	
 	if(data !== "original"){
 		const filename = originalImg.replace(/\.[^/.]+$/, "");
 		targetImg.src = `forensic/${filename}${data}.png`;

@@ -2,11 +2,14 @@ h2  FORENSIC ANALYSIS
 p
   | Defined by the SWGIT... "Forensic Image Analysis is the application of image science and domain expertise to interpret the content of an image and/or the image itself in legal matters. Major subdisciplines of Forensic Image Analysis with law enforcement applications include: Photogrammetry, Photographic Comparison, Content Analysis, and Image Authentication".
 
+p
+  a(href="http://www.blackhat.com/presentations/bh-dc-08/Krawetz/Whitepaper/bh-dc-08-krawetz-WP.pdf") Whitepaper >> Picture's Worth, digital image analysis and forensics by Ph.D. Neal Krawetz
+  
 div.forensic-results_container
   nav.foresic-nav
     ul
       li.foresic-nav_element
-        button.foresic-element_button.active-button(onclick="updateImg(this, 'original')", type='button', name='button')  Original 
+        button.foresic-element_button(onclick="updateImg('original')", type='button', name='button')  Original 
       li.foresic-nav_element
         button.foresic-element_button(onclick="updateImg(this, '_ela')", type='button', name='button')  ELA (Error Level Analysis) 
       li.foresic-nav_element
