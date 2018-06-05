@@ -31,7 +31,7 @@ Creamos esta herramienta para mostrar al mundo la importancia de los metadatos y
 ### Equipo
 
  - [Ulises Gascón (@UlisesGascon)](https://github.com/ulisesGascon) (Leader Backend)
- - [Elena Mateos (@UlisesGascon)](https://github.com/ulisesGascon) (Leader Frontend)
+ - [Elena Mateos (@ElenaMLopez)](https://github.com/ElenaMLopez) (Leader Frontend)
 
 
 ##### Agradecimientos
