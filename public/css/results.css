@@ -74,7 +74,7 @@ ul > li {
 .foresic-nav_element {
   list-style: none;
 }
-.foresic-nav_element > button {
+.foresic-element_button {
   background-color: black;
   border: 2px solid #00FF00;
   color: #00FF00;
@@ -87,7 +87,7 @@ ul > li {
   text-align: left;
   width: 90%;
 }
-.foresic-nav_element > button:hover {
+.foresic-element_button:hover {
   background-color: #00FF00;
   color: black;
 }
@@ -123,3 +123,4 @@ ul > li {
   color: black;
   cursor: crosshair;
 }
+
