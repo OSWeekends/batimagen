@@ -11,7 +11,7 @@ function updateImg (e, data) {
 	}
 
 	// Clean Active class in buttons
-	for (var i = buttons.length; i--; ) {
+	for (let i = buttons.length; i--; ) {
 		buttons[i].classList.remove("active-button");
 	}
 	// Add class to current button
