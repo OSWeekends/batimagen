@@ -37,5 +37,9 @@ colorPrint  "4. This will install Phoenix tool"
 
 ./install-phoenix.sh
 
+colorPrint "5. This will install Exiftool in the system"
+
+sudo apt-get install libimage-exiftool-perl
+
 colorPrint "All installed sucessfully!"
 colorPrint "Please add your tokens and credentials as explained in the Readme.md before start the server..."
