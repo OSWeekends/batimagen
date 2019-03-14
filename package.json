@@ -13,6 +13,9 @@
     "name": "Open Source Weekends. Cibersecurity Guild",
     "url": "https://osweekends.com"
   },
+  "engines": {
+    "node": ">=8"
+  },
   "contributors": [
     {
       "name": "Ulises Gascón",
@@ -29,12 +32,12 @@
   ],
   "license": "GPL-3.0",
   "dependencies": {
-    "@google-cloud/vision": "0.19.0",
-    "body-parser": "1.18.2",
-    "express": "4.16.3",
-    "express-fileupload": "0.4.0",
+    "@google-cloud/vision": "0.25.0",
+    "body-parser": "1.18.3",
+    "express": "4.16.4",
+    "express-fileupload": "1.0.0",
     "image-extensions": "1.1.0",
-    "mime-types": "2.1.18",
+    "mime-types": "2.1.22",
     "node-exiftool": "2.3.0",
     "node-virustotal": "2.4.2",
     "pug": "2.0.3"
