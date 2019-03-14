@@ -1,6 +1,14 @@
 
 h4 Detected Safe Search 
-ul
-  for value, key in data.vision.detectSafeSearch
-    - value = value.toLowerCase().replace("_", " ");
-    li #{key}: #{value}
+
+if data.vision
+  ul
+    for value, key in data.vision.detectSafeSearch
+      - value = value.toLowerCase().replace("_", " ");
+      li #{key}: #{value}
+    else
+      ul
+        li Sorry, no info!
+else
+    ul
+      li Sorry, no info!

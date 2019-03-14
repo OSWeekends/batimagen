@@ -1,8 +1,13 @@
 h4 Detected Logos:
-for field in data.vision.detectLogos
-  each value, key in field
+
+if data.vision
+  for field in data.vision.detectLogos
+    each value, key in field
+      ul
+        li #{key}: #{value}
+  else
     ul
-      li #{key}: #{value}
+      li Sorry, no info!
 else
     ul
       li Sorry, no info!

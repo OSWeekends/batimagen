@@ -1,8 +1,13 @@
 
 h4 Detected Full Text 
-- var text = data.vision.detectText[0]
-if text 
-  p.detect-text  [#{text.locale}] #{text.description}
+
+if data.vision
+  - var text = data.vision.detectText[0]
+  if text 
+    p.detect-text  [#{text.locale}] #{text.description}
+  else
+    ul
+      li Sorry, no info!
 else
   ul
     li.detect-text Sorry, no info!

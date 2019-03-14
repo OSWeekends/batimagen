@@ -1,5 +1,13 @@
 h4 Dominant Colors:
-ul
-  - var colors = data.vision.detectProperties.dominantColors.colors
-  for color in colors
-    li RGBA(#{color.color.red}, #{color.color.green}, #{color.color.blue}, #{color.color.alpha ? color.color.alpha : 0}) | score: #{color.score.toFixed(4)} | Pixel Fraction: #{color.pixelFraction.toFixed(4)}
+
+if data.vision
+  ul
+    - var colors = data.vision.detectProperties.dominantColors.colors
+    for color in colors
+      li RGBA(#{color.color.red}, #{color.color.green}, #{color.color.blue}, #{color.color.alpha ? color.color.alpha : 0}) | score: #{color.score.toFixed(4)} | Pixel Fraction: #{color.pixelFraction.toFixed(4)}
+    else
+      ul
+        li Sorry, no info!
+else
+  ul
+    li Sorry, no info!

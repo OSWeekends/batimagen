@@ -1,8 +1,12 @@
 h4 Detected Labels:
-for field in data.vision.detectLabels
-  each value, key in field
-    ul.hidden
-      li #{key}: #{value}
+if data.vision
+  for field in data.vision.detectLabels
+    each value, key in field
+      ul.hidden
+        li #{key}: #{value}
+  else
+    ul
+      li Sorry, no info!
 else
     ul
       li Sorry, no info!

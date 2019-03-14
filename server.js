@@ -1,5 +1,5 @@
 const express = require('express'),
- processFile = require("./file_processing"),
+ processFile = require("./lib/batimagen"),
  fileUpload = require('express-fileupload'),
  bodyParser = require('body-parser');
 
@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/upload', (req, res) => {
-    res.redirect("/")
+    res.redirect("/");
 });
 
 app.post('/upload', processFile);
