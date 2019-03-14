@@ -5,16 +5,8 @@ const http = require('http'),
     visionAnalysis = require("./vision"),
     phoenix = require("./phoenix"),
     virusAnalysis = require("./viral"),
-    hp = require("./honeypot"),
-    config = require("./config"),
     mime = require('mime-types'),
     imageExtensions = require('image-extensions');
-
-function launchHoneypot (req, fileData, analysisData){
-    if(config.honeypotMode) {
-        hp(req, fileData, analysisData);
-    }
-}
 
 function imageValidator(fileExtension){
     return imageExtensions.includes(fileExtension);
@@ -90,15 +82,13 @@ function processFile (req, res) {
                         .then(responses => {
                             finalData.vision = responses[0];
                             res.render('results', {data: finalData});
-                            launchHoneypot (req, fileInfo, finalData);
                         })
                         .cath(err => {
-                            console.log("[error][metaAnalizer]", err)
+                            console.log("[error][metaAnalizer]", err);
                         });
 
                     } else {
                         res.render('results', {data: finalData});
-                        launchHoneypot (req, fileInfo, finalData);
                     }
                     
                 })

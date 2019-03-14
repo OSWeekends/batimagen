@@ -1,8 +1,7 @@
 var config = {
-    honeypotMode: true,
     token: {
-        virustotal: "----TOKEN---"
+        virustotal: process.env.VIRUSTOTAL || "----TOKEN---"
     }
-}
+};
 
 module.exports = config;
