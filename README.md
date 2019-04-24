@@ -86,6 +86,22 @@ Solo necesitas tener Node y descargarte [exiftool](https://www.sno.phy.queensu.c
 `docker build -t batimagen  . `
 `docker run -p 3000:3000 batimagen`
 
+**Lanzar el proyecto con todo (thirdparty)**
+
+Guarda el fichero de tokens de Google Cloud en `secrets/SECRET_gcloud.json`
+
+```bash
+$ docker run \
+     -p 3000:3000 \ # Bindeo de puertos
+     -v  "$(pwd)/secrets/":/app/secrets/ \ # Compartición de fichero de credenciales
+     -e TP_ENABLED=true  \      # habilitar terceras partes
+     -e TP_VIRUSTOTAL=true \    # habilitar virus total
+     -e TP_GVISION=true \       # habilitar Google Vision
+     -e VIRUSTOTAL='----YOUR TOKEN ----' # Añadir to token de virus total
+     -e GOOGLE_APPLICATION_CREDENTIALS='./secrets/SECRET_gcloud.json' # vicular la ruta de los tokens de Google Cloud
+      batimagen # Imagen de docker
+```
+
 **Parar el proyecto**
 `docker kill batimagen`
 
