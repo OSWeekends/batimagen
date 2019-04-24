@@ -6,9 +6,9 @@ WORKDIR /app
 
 COPY . .
 
-RUN chmod +x scripts/*.sh && ./scripts/installation.sh
-
-RUN npm install
+RUN chmod +x scripts/*.sh && \
+    ./scripts/installation.sh && \
+    npm install
 
 EXPOSE 8080
 CMD [ "npm", "start" ]
