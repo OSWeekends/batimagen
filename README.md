@@ -83,7 +83,11 @@ Solo necesitas tener Node y descargarte [exiftool](https://www.sno.phy.queensu.c
 
 **Lanza el proyecto en local**
 
-`npm install && npm start`
+`docker build -t batimagen  . `
+`docker run -p 3000:3000 batimagen`
+
+**Parar el proyecto**
+`docker kill batimagen`
 
 ### Estado del proyecto.
 

@@ -1,3 +1,5 @@
+#!/bin/bash
+
 #install opencv dependencies
 apt-get install --yes --force-yes git cmake libgtk2.0 libgtk2.0-dev pkg-config python-dev python-numpy libjpeg-dev libpng-dev libtiff-dev libjasper-dev unzip
 
@@ -34,6 +36,3 @@ make install
 
 #update libs
 ldconfig
-
-# Back to /scripts
-cd ../..

@@ -1,20 +1,17 @@
 {
   "name": "batimagen",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Un proyecto sobre metadatos del guild de ciberseguridad",
   "main": "server.js",
   "scripts": {
-    "install-dependencies": "chmod +x scripts/*.sh && cd scripts && sudo ./installation.sh",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run tokens && node server.js",
-    "tokens": "export GOOGLE_APPLICATION_CREDENTIALS='./SECRET_gcloud.json'"
+    "start": "node server.js"
   },
   "author": {
     "name": "Open Source Weekends. Cibersecurity Guild",
     "url": "https://osweekends.com"
   },
   "engines": {
-    "node": ">=8"
+    "node": ">=10"
   },
   "contributors": [
     {
@@ -24,6 +21,10 @@
     {
       "name": "Elena Mateos",
       "url": "https://github.com/ElenaMLopez"
+    },
+    {
+      "name": "Francisco Valdesoiro Gil",
+      "url": "https://github.com/FranciscoValdesoiro"
     },
     {
       "name": "Carlos Crisóstomo Vals (Kr0n0)",
