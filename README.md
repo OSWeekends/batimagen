@@ -93,6 +93,7 @@ Guarda el fichero de tokens de Google Cloud en `secrets/SECRET_gcloud.json`
 ```bash
 $ docker run \
      -p 3000:3000 \ # Bindeo de puertos
+     -v  "$(pwd)/temp/":/app/temp/ \ # Extraer los analisis del repo
      -v  "$(pwd)/secrets/":/app/secrets/ \ # Compartición de fichero de credenciales
      -e TP_ENABLED=true  \      # habilitar terceras partes
      -e TP_VIRUSTOTAL=true \    # habilitar virus total
@@ -102,8 +103,6 @@ $ docker run \
       batimagen # Imagen de docker
 ```
 
-**Parar el proyecto**
-`docker kill batimagen`
 
 ### Estado del proyecto.
 
