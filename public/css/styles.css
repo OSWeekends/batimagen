@@ -1,0 +1,248 @@
+*{
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: #00ff00;
+  font-family: monospace, sans-serif;
+  margin: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  color:  #adff00;
+}
+
+
+.button-custom {
+  background-color: transparent;
+  border: none;
+  cursor: crosshair;
+  padding: 5px;
+}
+.icon-button {
+  height: auto;
+  width: 20px;
+}
+
+.main-header {
+  background-image: url('../img/logo.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 250px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.main-section_container {
+  margin: 20px auto;
+}
+
+.main-form_inputs {
+  align-items: center;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin: 2em auto;
+  width: 80%
+}
+
+.custom-input,
+.submit-button,
+.custom-label {
+  background-color: black;
+  border: 2px solid #00ff00;
+  color: inherit;
+  cursor: crosshair;
+  display: block;
+  font-size: 1.2em;
+  padding: 5px 10px;
+  text-align: center;
+  text-transform: uppercase;
+  height: 60px;
+}
+
+.custom-input,
+.custom-label {
+  background-color: rgba(0,255,0,.25);
+  width: 45%;
+}
+.custom-label {
+  padding-top: 15px;
+
+}
+
+.input-url::placeholder  {
+  color: #00ff00;
+}
+
+input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    cursor: inherit;
+    display: none;
+}
+
+
+.submit-button {
+  margin: 5px auto;
+  width: 80%;
+}
+
+.submit-button:hover {
+  color: black;
+  background-color: #00ff00;
+}
+.disclaimer {
+  font-size: .8em;
+  line-height: 1.5em;
+  margin: 100px auto 80px auto;
+  text-align: justify;
+  width: 90%;
+}
+
+/*   --- --- FOOTER --- ---   */
+
+
+.main-footer {
+  background-color: #00ff00;
+  bottom: 0;
+  display: flex;
+  height: 50px;
+  justify-content: space-between;
+  padding: 5px;
+  position: fixed;
+  width: 100%;
+}
+.OSW-info {
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  padding: 10px;
+  width: 30%;
+}
+.OSW-info > a:hover {
+  color: white;
+}
+
+/* ----------   SNIPET -----------*/
+
+.snipet {
+  align-items: center;
+  background-color: black;
+  display: flex;
+  font-size: 1.2em;
+  overflow: hidden;
+  padding: 0 5px;
+  height: 39px;
+  width: 50%;
+}
+.animated-cursor {
+  animation: runner 4s linear, blink 1s linear 4.5s infinite;
+  animation-fill-mode: forwards;
+  background-color: black;
+  border-left: 16px solid #00FF00;
+  height: 28px;
+  left: 5px;
+  position: absolute;
+  top: 11px;
+  width: 455px;
+}
+.blink {
+
+}
+
+
+@keyframes runner {
+  0% {
+    left: 5px;
+  }
+  5% {
+    left:42px;
+  }
+  10% {
+    left: 42px;
+
+  }
+  15% {
+    left: 42px;
+  }
+  20% {
+    left: 108px;
+  }
+  25% {
+    left: 108px;
+
+  }
+  26% {
+    left: 131px;
+  }
+  30% {
+    left: 131px;
+    width: 450px;
+  }
+  40% {
+    left: 214px;
+  }
+  45% {
+    left: 214px;
+
+  }
+  50% {
+    left: 305px;
+    width: 250px;
+  }
+  55% {
+    left: 305px;
+    width: 220px;
+  }
+  70% {
+    left: 427px;
+    width: 150px;
+  }
+
+  95% {
+    left: 427px;
+    width: 100px;
+  }
+  100% {
+    animation: blink 1s linear infinite;
+
+    left: 460px;
+    width: 10px;
+
+  }
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  49% {
+    opacity: 0}
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* --- end footer ---*/
+
+/*   --- HELPERS ---   */
+.hidden {
+  display: none;
+}
+.inactive {
+  background-color: #009000;
+}
+

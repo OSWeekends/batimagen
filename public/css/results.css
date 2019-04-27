@@ -1,0 +1,126 @@
+/* --- --- RESULTS --- --- */
+ul > li {
+  list-style-image: url("../img/right-arrow.svg");
+}
+
+.container {
+  padding: 0 10px;
+}
+
+/*   NAV   */
+.results-nav_container {
+  border-bottom: 2px dashed #00FF00;
+  border-top: 2px dashed #00FF00;
+  padding: 10px 0;
+  margin-top: 10px;
+  width: 100%;
+}
+.results-nav_list{
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+}
+.results-nav_element {
+  list-style: none;
+  padding: 10px;
+  width: 45%;
+}
+.results-nav_element > button {
+  background-color: black;
+  border: 2px solid #00FF00;
+  color: #00FF00;
+  cursor: crosshair;
+  font-size: 1.2em;
+  font-weight: bold;
+  height: 60px;
+  width: 100%;
+}
+.results-nav_element > button:hover {
+  background-color: #00FF00;
+  color: black;
+}
+
+
+/* --- end nav --- */
+/*   RESULTS CONTAINER   */
+.result-container {
+  background-color: #00ff00;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  padding: 5px;
+}
+.vision-results,
+.forensic-results {
+  background-color: black;
+  margin: 0 auto 45px auto;
+  padding: 5px;
+  width: calc(100% - 10px);
+  word-wrap: break-word;
+}
+.forensic-results {
+  display: none;
+}
+
+/*   DETECTETD TEXT SECTION   */
+.detect-text {
+  margin-bottom: 60px;
+}
+
+/*   FORENSIC ANALYSIS   */
+.forensic-results_container {
+  display: flex;
+}
+.foresic-nav_element {
+  list-style: none;
+}
+.foresic-element_button {
+  background-color: black;
+  border: 2px solid #00FF00;
+  color: #00FF00;
+  cursor: crosshair;
+  font-size: 1.2em;
+  font-weight: bold;
+  height: 70px;
+  margin: 5px;
+  padding: 5px 10px;
+  text-align: left;
+  width: 90%;
+}
+.foresic-element_button:hover {
+  background-color: #00FF00;
+  color: black;
+}
+.foresic-nav,
+.forensic-analysis {
+  width: 50%;
+}
+.forensic-analysis {
+  background-color: #00FF00;
+  min-height: 600px;
+}
+.foresic-nav > ul {
+  padding: 0;
+}
+.forensic-analysis {
+  margin: 0;
+  padding: 5px;
+}
+.forensic-image {
+  width: 100%;
+}
+
+.active-button{
+  background-color: #00FF00;
+  color: black;
+}
+
+.vision-results ul > li > a {
+    padding: 0 5px;
+}
+.vision-results ul > li > a:hover {
+  background-color: #00FF00;
+  color: black;
+  cursor: crosshair;
+}
+

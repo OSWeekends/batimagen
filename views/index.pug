@@ -3,12 +3,22 @@ html(lang='en')
   head
     include includes/head.pug
   body
-    include includes/logo.pug
-    p Pick an image from your disk and discover the metadata attached to it
-    form#uploadForm(ref='uploadForm', action='/upload', method='post', enctype='multipart/form-data')
-      input(type='file', name='sampleFile')
-      br
-      input(type='url', name='sampleUrl' placeholder="URL?")
-      br
-      input(type='submit', value='Analizar!')
+    main.container
+      include includes/logo.pug
+      section.main-section_container
+        form#uploadForm.main-form(action='/upload', method='post', enctype='multipart/form-data')
+          .main-form_inputs
+            label.custom-label(for='uploadFile')  Upload File 
+            input#uploadFile.custom-input.upload-input(type='file', name='sampleFile', value='', placeholder='Upload file')
+            span OR
+            input#analizeUrl.custom-input.input-url(type='url', name='sampleUrl', value='', placeholder='Analysis from URL')
+          button.submit-button(type='submit', name='button')  Analize 
+      aside.disclaimer
+        p
+          |Disclaimer: This project is intended to sensitize the user about cybersecurity, prevention and detection of unauthorized use of computer systems.
+        p
+          |The user when applying this knowledge must take into account that the rules that regulate computer security must be respected, avoiding the commission of acts that do not comply with the current legislation, being its responsibility the misuse of this project.
+        p
+          |The developers of the project are not responsible for the negligent or illicit use that users can make with the knowledge that is revealed in this project.
+    include includes/footer.pug
     include includes/scripts.pug

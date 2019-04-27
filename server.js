@@ -1,5 +1,5 @@
 const express = require('express'),
- processFile = require("./file_processing"),
+ processFile = require("./lib/batimagen"),
  fileUpload = require('express-fileupload'),
  bodyParser = require('body-parser');
 
@@ -8,6 +8,7 @@ const port = process.env.PORT || 3000;
 
 // Middelware
 app.use(express.static('public'));
+app.use("/forensic", express.static(__dirname + '/temp'));
 app.use(fileUpload());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set('view engine', 'pug');
@@ -18,7 +19,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/upload', (req, res) => {
-    res.redirect("/")
+    res.redirect("/");
 });
 
 app.post('/upload', processFile);

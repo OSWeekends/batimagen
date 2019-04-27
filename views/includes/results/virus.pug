@@ -1,0 +1,16 @@
+h2 Virus:  
+
+if data.virusData
+  - var virusLink = data.virusData.permalink
+  a(href=virusLink)  Analisis de virus en el archivo 
+  br
+  ul
+    for key, value in data.virusData
+      li #{value}: #{key}
+    else
+      li Sorry, no info!
+  if data.virusData.error
+      strong Error?: #{error}
+else 
+    ul
+      li Sorry, no info!

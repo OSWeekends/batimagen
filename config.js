@@ -1,8 +1,15 @@
 var config = {
-    honeypotMode: true,
+    thirdPartiesEnabled: process.env.TP_ENABLED || false,
+    thirdParties: {
+        virustotal: process.env.TP_VIRUSTOTAL || false,
+        googleVision: process.env.TP_GVISION || false
+    },
+    paths: {
+        temp: `${__dirname}/temp`
+    },
     token: {
-        virustotal: "----TOKEN---"
+        virustotal: process.env.VIRUSTOTAL || ""
     }
-}
+};
 
 module.exports = config;

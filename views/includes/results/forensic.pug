@@ -1,0 +1,30 @@
+h2  FORENSIC ANALYSIS 
+p
+  | Defined by the SWGIT... "Forensic Image Analysis is the application of image science and domain expertise to interpret the content of an image and/or the image itself in legal matters. Major subdisciplines of Forensic Image Analysis with law enforcement applications include: Photogrammetry, Photographic Comparison, Content Analysis, and Image Authentication".
+
+p
+  a(href="http://www.blackhat.com/presentations/bh-dc-08/Krawetz/Whitepaper/bh-dc-08-krawetz-WP.pdf") Whitepaper >> Picture's Worth, digital image analysis and forensics by Ph.D. Neal Krawetz
+  
+div.forensic-results_container
+  nav.foresic-nav
+    ul
+      li.foresic-nav_element
+        button.foresic-element_button(onclick="updateImg('original')", type='button', name='button')  Original 
+      li.foresic-nav_element
+        button.foresic-element_button(onclick="updateImg(this, '_ela')", type='button', name='button')  ELA (Error Level Analysis) 
+      li.foresic-nav_element
+        button.foresic-element_button(onclick="updateImg(this, '_lg')", type='button', name='button')  LG (Luminance Gradient) 
+      li.foresic-nav_element
+        button.foresic-element_button(onclick="updateImg(this, '_avgdist')", type='button', name='button')  AVGDIST (Average-Distance of Neighbor Pixels) 
+      li.foresic-nav_element
+        button.foresic-element_button(onclick="updateImg(this, '_copymove')", type='button', name='button')  Copy-Move Detection 
+      li.foresic-nav_element
+        button.foresic-element_button(onclick="updateImg(this, '_hsv')", type='button', name='button')  HSV Colorspace Histogram 
+      li.foresic-nav_element
+        button.foresic-element_button(onclick="updateImg(this, '_lab')", type='button', name='button')  Lab Colorspace Histogram 
+  .forensic-analysis
+    img.forensic-image(data-image-original=data.details.name, src="forensic/" + data.details.name, alt='forensic image analized')
+script
+  include forensic/script_btn.js
+  
+
