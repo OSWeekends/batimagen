@@ -8,7 +8,7 @@ var config = {
         temp: `${__dirname}/temp`
     },
     token: {
-        virustotal: process.env.VIRUSTOTAL || ""
+        virustotal: process.env.TP_VIRUSTOTAL || ""
     }
 };
 
