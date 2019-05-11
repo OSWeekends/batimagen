@@ -65,7 +65,9 @@ El proyecto esta disponible para su descarga y ejecución en local.
 
 **Más informacion en [CONTRIBUTING.md](CONTRIBUTING.md)**
 
-### ¿Cómo usarlo?.
+## ¿Cómo usarlo?.
+
+### Sin usar Docker
 
 #### TL:DR;
 
@@ -83,7 +85,11 @@ Solo necesitas tener Node y descargarte [exiftool](https://www.sno.phy.queensu.c
 
 **Lanzar el proyecto en local**
 
-Si se sigue este procedimiento es necesario insertar los tokens de la API de Google en node.env, así como el de virusTotal. Seguir las instrucciones del package.json
+Si se sigue este procedimiento es necesario insertar los tokens de la API de Google en node.env, así como el de virusTotal. Seguir las instrucciones del package.json donde se ve que el comando es start:
+
+```bash
+npm run start
+```
 
 ### Utilizando docker
 
