@@ -1,6 +1,6 @@
 {
   "name": "batimagen",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Un proyecto sobre metadatos del guild de ciberseguridad",
   "main": "server.js",
   "scripts": {
