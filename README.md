@@ -81,10 +81,31 @@ Solo necesitas tener Node y descargarte [exiftool](https://www.sno.phy.queensu.c
 
 `git clone https://github.com/OSWeekends/batimagen.git`
 
+**Lanzar el proyecto en local**
+
+Si se sigue este procedimiento es necesario insertar los tokens de la API de Google en node.env, así como el de virusTotal. Seguir las instrucciones del package.json
+
+### Utilizando docker
+
+**Descargar la imagen de Docker**
+
+Has de tener docker instalado en el ordenador.
+
+Descarga la imagen de Batimagen de DockerHub desde [aquí](https://hub.docker.com/r/osweekends/batimagen) con el siguiente comando:
+```bash
+docker pull osweekends/batimagen
+```
+
 **Lanza el proyecto en local**
 
-`docker build -t batimagen  . `
-`docker run -p 3000:3000 batimagen`
+```bash
+docker build -t batimagen  . 
+```
+Una vez hecho esto, puedes hacer funcionar el docker con este comando, en este caso, no se utilizan ni la API de google ni el token de virus total, así que esos resultados no van a verse en el análisis:
+
+```bash
+docker run -p 3000:3000 batimagen
+```
 
 **Lanzar el proyecto con todo (thirdparty)**
 
@@ -100,7 +121,7 @@ $ docker run \
      -e TP_GVISION=true \       # habilitar Google Vision
      -e VIRUSTOTAL='----YOUR TOKEN ----' # Añadir to token de virus total
      -e GOOGLE_APPLICATION_CREDENTIALS='./secrets/SECRET_gcloud.json' # vicular la ruta de los tokens de Google Cloud
-      batimagen # Imagen de docker
+      osweekends/batimagen # Imagen de docker
 ```
 
 
