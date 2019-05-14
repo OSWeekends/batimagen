@@ -107,7 +107,7 @@ docker pull osweekends/batimagen
 Una vez hecho esto, puedes hacer funcionar el docker con este comando, en este caso, no se utilizan ni la API de google ni el token de virus total, así que esos resultados no van a verse en el análisis:
 
 ```bash
-docker run -p 3000:3000 batimagen
+docker run -p 3000:3000 osweekends/batimagen
 ```
 
 **Lanzar el proyecto con todo (thirdparty)**
