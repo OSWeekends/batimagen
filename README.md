@@ -140,7 +140,7 @@ El usuario al aplicar estos conocimientos deberá tener en cuenta que hay que re
 
 Los desarrolladores del proyecto no se hace responsables del uso negligente o ilícito que puedan hacer los usuarios con los conocimientos que se ponen de manifiesto en este proyecto.
 
-### Some extar info ;)
+### Some extra info ;)
 https://docs.google.com/presentation/d/1a2DEwlg6Ssnqqwu98su5ykK_8YhL_8dKToJ2T6fxzfI/edit?usp=sharing
 
 ### Licencia
