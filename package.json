@@ -4,7 +4,9 @@
   "description": "Un proyecto sobre metadatos del guild de ciberseguridad",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "author": {
     "name": "Open Source Weekends. Cibersecurity Guild",
@@ -42,6 +44,8 @@
     "node-exiftool": "2.3.0",
     "node-virustotal": "2.4.2",
     "pug": "2.0.3",
-    "uuid": "3.3.2"
-  }
+    "uuid": "3.3.2",
+    "snyk": "^1.189.0"
+  },
+  "snyk": true
 }
