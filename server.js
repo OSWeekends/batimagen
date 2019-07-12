@@ -1,4 +1,5 @@
 const express = require('express'),
+ {services} = require('./config'),
  processFile = require("./lib/batimagen"),
  fileUpload = require('express-fileupload'),
  bodyParser = require('body-parser');
@@ -23,6 +24,11 @@ app.get('/upload', (req, res) => {
 });
 
 app.post('/upload', processFile);
+
+
+app.get('/api/v1/services', (req, res) => {
+  res.json(services);
+})
 
 app.listen(port, () => {
   console.log('[info][server] listening on port:', port);
