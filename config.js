@@ -12,4 +12,10 @@ var config = {
     }
 };
 
+config.services = {thirdParties: Boolean(config.thirdParties) }
+
+for(let service in config.thirdParties) {
+    config.services[service] = Boolean(config.thirdParties[service])
+}
+
 module.exports = config;
