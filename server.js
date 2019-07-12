@@ -2,7 +2,9 @@ const express = require('express'),
  {services} = require('./config'),
  processFile = require("./lib/batimagen"),
  db = require('./lib/database'),
+ {fileValidation} = require("./lib/digester")
  fileUpload = require('express-fileupload'),
+ uuidv4 = require('uuid/v4'),
  bodyParser = require('body-parser');
 
 const app = express();
@@ -28,7 +30,21 @@ app.get('/reports', (req, res) => {
     res.render('reports')
 })
 
-app.post('/upload', processFile);
+app.get('/reports/:uuid', (req, res) => {
+  const uuid = req.params.uuid;
+  const report = db.get('reports').find({uuid}).value()
+  if(report && report.isReady){
+    res.render('results', {data: report.data})
+  } else {
+    res.redirect('/reports')
+  }
+})
+
+app.post('/upload', fileValidation, (req, res) => {
+  const uuid = uuidv4()
+  processFile(req, {uuid})
+  res.redirect(`/reports/${uuid}`)
+});
 
 app.get('/api/v1/services', (req, res) => {
   res.json(db.get('services').value());
