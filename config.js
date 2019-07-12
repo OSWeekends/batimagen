@@ -1,3 +1,5 @@
+const db = require('./lib/database')
+
 var config = {
     thirdPartiesEnabled: process.env.TP_ENABLED || false,
     thirdParties: {
@@ -17,5 +19,7 @@ config.services = {thirdParties: Boolean(config.thirdParties) }
 for(let service in config.thirdParties) {
     config.services[service] = Boolean(config.thirdParties[service])
 }
+
+db.set('services', config.services).write()
 
 module.exports = config;
