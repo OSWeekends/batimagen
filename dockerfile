@@ -4,11 +4,16 @@ ENV DEBIAN_FRONTEND noninteractive
 
 WORKDIR /app
 
-COPY . .
+COPY scripts/*.sh ./scripts/
 
 RUN chmod +x scripts/*.sh && \
-    ./scripts/installation.sh && \
-    npm install
+    ./scripts/installation.sh
+
+COPY package*.json ./
+
+RUN npm install
+
+COPY . .
 
 EXPOSE 8080
 CMD [ "npm", "start" ]
