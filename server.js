@@ -3,6 +3,8 @@ const express = require('express'),
  processFile = require("./lib/batimagen"),
  fileUpload = require('express-fileupload'),
  bodyParser = require('body-parser');
+  GDB = require('@goblindb/goblindb');
+
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -30,6 +32,11 @@ app.get('/api/v1/services', (req, res) => {
   res.json(services);
 })
 
-app.listen(port, () => {
-  console.log('[info][server] listening on port:', port);
-});
+const goblinDB = GDB({
+  fileName: 'batimagen'
+}, err => {
+  if(err) throw err;
+  app.listen(port, () => {
+    console.log('[info][server] listening on port:', port);
+  });
+})

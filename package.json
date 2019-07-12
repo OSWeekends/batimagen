@@ -35,6 +35,7 @@
   ],
   "license": "GPL-3.0",
   "dependencies": {
+    "@goblindb/goblindb": "^0.1.1",
     "@google-cloud/vision": "0.25.0",
     "body-parser": "1.18.3",
     "express": "4.16.4",
@@ -44,8 +45,8 @@
     "node-exiftool": "2.3.0",
     "node-virustotal": "2.4.2",
     "pug": "2.0.3",
-    "uuid": "3.3.2",
-    "snyk": "^1.189.0"
+    "snyk": "^1.189.0",
+    "uuid": "3.3.2"
   },
   "snyk": true
 }
