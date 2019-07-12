@@ -24,6 +24,10 @@ app.get('/upload', (req, res) => {
     res.redirect("/");
 });
 
+app.get('/reports', (req, res) => {
+    res.render('reports')
+})
+
 app.post('/upload', processFile);
 
 app.get('/api/v1/services', (req, res) => {
