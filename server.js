@@ -50,6 +50,29 @@ app.get('/api/v1/services', (req, res) => {
   res.json(db.get('services').value());
 })
 
+app.get('/api/v1/reports/:uuid', (req, res) => {
+  const uuid = req.params.uuid;
+  const report = db.get('reports').find({uuid}).value()
+  if(report){
+    return res.json(report)
+  } 
+  res.status(404).json({msg: "This report does not exist!"})
+})
+
+app.get('/api/v1/reports', (req, res) => {
+  const reports = db.get('reports').value();
+  const data = reports.map(report => {
+    return {
+      uuid: report.uuid,
+      isReady: report.isReady,
+      hasError: report.hasError,
+      status: report.status,
+      startedAt: report.startedAt
+    }
+  })
+  res.json(data)
+})
+
 app.listen(port, () => {
   console.log('[info][server] listening on port:', port);
 });
