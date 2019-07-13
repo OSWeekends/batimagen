@@ -1,5 +1,6 @@
 const express = require('express'),
  {services} = require('./config'),
+ {removeRelatedFiles} = require('./lib/utils')
  processFile = require("./lib/batimagen"),
  db = require('./lib/database'),
  {fileValidation} = require("./lib/digester")
@@ -58,6 +59,24 @@ app.get('/api/v1/reports/:uuid', (req, res) => {
   } 
   res.status(404).json({msg: "This report does not exist!"})
 })
+
+app.delete('/api/v1/reports/:uuid', (req, res) => {
+  const uuid = req.params.uuid;
+  const report = db.get('reports').find({uuid}).value()
+  if(!report) {
+    return res.status(404).json({msg: "This report does not exist!"})
+  } 
+  
+  if(!report.isReady){
+    return res.status(400).json({msg: "This report wasn't generated yet!"})
+  } 
+  
+  db.get('reports').remove({uuid}).write()
+    removeRelatedFiles(uuid)
+      .then(() => res.json({msg: `The report ${uuid} was removed successfully!`}))
+      .catch(err => res.status(500).json({msg: err}))     
+})
+
 
 app.get('/api/v1/reports', (req, res) => {
   const reports = db.get('reports').value();
