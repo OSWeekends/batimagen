@@ -9,9 +9,9 @@ html(lang='en')
         form#uploadForm.main-form(action='/upload', method='post', enctype='multipart/form-data')
           .main-form_inputs
             label.custom-label(for='uploadFile')  Upload File 
-            input#uploadFile.custom-input.upload-input(type='file', name='sampleFile', value='', placeholder='Upload file')
+            input#uploadFile.custom-input.upload-input(type='file', name='file', value='', placeholder='Upload file')
             span OR
-            input#analizeUrl.custom-input.input-url(type='url', name='sampleUrl', value='', placeholder='Analysis from URL')
+            input#analizeUrl.custom-input.input-url(type='url', name='url', value='', placeholder='Analysis from URL')
           button.submit-button(type='submit', name='button')  Analize 
       aside.disclaimer
         p
