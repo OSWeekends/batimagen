@@ -3,7 +3,7 @@ services:
   dev:
     build: .
     volumes:
-      - nodemodules:/usr/src/service/node_modules
+      - ./node_modules:/usr/src/service/node_modules
       - .:/usr/src/service
     environment:
       - NODE_ENV=development
