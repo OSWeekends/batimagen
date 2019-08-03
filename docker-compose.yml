@@ -1,0 +1,13 @@
+version: '3'
+services:
+  dev:
+    build: .
+    volumes:
+      - nodemodules:/usr/src/service/node_modules
+      - .:/usr/src/service
+    environment:
+      - NODE_ENV=development
+    working_dir: /usr/src/service
+    #command: npm run dev
+    ports:
+      - 3000:3000

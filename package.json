@@ -6,7 +6,10 @@
   "scripts": {
     "start": "node server.js",
     "snyk-protect": "snyk protect",
-    "prepare": "npm run snyk-protect"
+    "prepare": "npm run snyk-protect",
+    "dev": "DEBUG=* nodemon server.js",
+    "start-infra": "docker-compose up",
+    "stop-infra": "docker-compose down"
   },
   "author": {
     "name": "Open Source Weekends. Cibersecurity Guild",
@@ -37,6 +40,7 @@
   "dependencies": {
     "@google-cloud/vision": "0.25.0",
     "body-parser": "1.18.3",
+    "debug": "^4.1.1",
     "express": "4.16.4",
     "express-fileupload": "1.0.0",
     "image-extensions": "1.1.0",
@@ -48,5 +52,8 @@
     "snyk": "^1.189.0",
     "uuid": "3.3.2"
   },
-  "snyk": true
+  "snyk": true,
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
 }
