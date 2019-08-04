@@ -1,1 +1,1 @@
-console.log("Hi! I am batimagen...")
+console.log('Hi! I am batimagen...')
