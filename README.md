@@ -14,11 +14,11 @@
 
 > Analizador de ficheros utilizando metadatos y APIs de terceros. Incluye un [honeypot](https://es.wikipedia.org/wiki/Honeypot) (Opcional)
 
-![Poster de Batimagen](other/img/logo.png)
+![Póster de Batimagen](other/img/logo.png)
 
 El proyecto utiliza la librería [ExifTool de Phil Harvey](https://www.sno.phy.queensu.ca/~phil/exiftool/) para extraer la información de los [metadatos del fichero](https://es.wikipedia.org/wiki/Metadatos).
 
-También se realiza un analisis en busca de virus utilizando [virustotal](https://www.virustotal.com/es/). En el caso de las imagenes el fichero en enviado a [Google vision API](https://cloud.google.com/vision/?hl=es) para detectar diversos parámetros como imagenes similares, textos, detección de caras, etc...
+También se realiza un análisis en busca de virus utilizando [virustotal](https://www.virustotal.com/es/). En el caso de las imágenes el fichero es enviado a [Google vision API](https://cloud.google.com/vision/?hl=es) para detectar diversos parámetros como imágenes similares, textos, detección de caras, etc...
 
 Utilizamos Node.js y Pug para hacer un aplicación web de tipo server render.
 
@@ -26,7 +26,7 @@ Utilizamos Node.js y Pug para hacer un aplicación web de tipo server render.
 
 **Motivación**
 
-Creamos esta herramienta para mostrar al mundo la importancia de los metadatos y la privacidad. Nuestro objetivo final es concienciar y enseñar un buen uso de la tecnologia para la ciudadania en general.
+Creamos esta herramienta para mostrar al mundo la importancia de los metadatos y la privacidad. Nuestro objetivo final es concienciar y enseñar un buen uso de la tecnología para la ciudadanía en general.
 
 ### Equipo
 
@@ -44,12 +44,12 @@ Creamos esta herramienta para mostrar al mundo la importancia de los metadatos y
 
 Necesitamos ayuda, ¡únete!
 
- - Traductor: ¿Nos ayudas a crear este portal en ingles?
- - Documentación: ¿Nos ayudas a explicar mejor que son los metadatos al mundo?
+ - Traductor: ¿Nos ayudas a crear este portal en inglés?
+ - Documentación: ¿Nos ayudas a explicar mejor qué son los metadatos al mundo?
 
 ### Demo
 
-El proyecto esta disponible para su descarga y ejecución en local.
+El proyecto está disponible para su descarga y ejecución en local.
 
 
 ### Tecnología utilizada
@@ -71,7 +71,7 @@ El proyecto esta disponible para su descarga y ejecución en local.
 
 #### TL:DR;
 
-Solo necesitas tener Node y descargarte [exiftool](https://www.sno.phy.queensu.ca/~phil/exiftool/install.html)
+Sólo necesitas tener Node y descargarte [exiftool](https://www.sno.phy.queensu.ca/~phil/exiftool/install.html)
 
 #### Instalación
 
@@ -138,7 +138,7 @@ Este proyecto tiene la intención de sensibilizar al usuario sobre la cibersegur
 
 El usuario al aplicar estos conocimientos deberá tener en cuenta que hay que respetar las normas que regulan la seguridad informática, evitando la comisión de actos que no se ajusten a la legalidad vigente, siendo su responsabilidad el mal uso que haga de este proyecto.
 
-Los desarrolladores del proyecto no se hace responsables del uso negligente o ilícito que puedan hacer los usuarios con los conocimientos que se ponen de manifiesto en este proyecto.
+Los desarrolladores del proyecto no se hacen responsables del uso negligente o ilícito que puedan hacer los usuarios con los conocimientos que se ponen de manifiesto en este proyecto.
 
 ### Some extra info ;)
 https://docs.google.com/presentation/d/1a2DEwlg6Ssnqqwu98su5ykK_8YhL_8dKToJ2T6fxzfI/edit?usp=sharing
