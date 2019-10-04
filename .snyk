@@ -28,3 +28,16 @@ patch:
         patched: '2019-07-12T08:48:37.727Z'
     - snyk > @snyk/dep-graph > graphlib > lodash:
         patched: '2019-07-12T08:48:37.727Z'
+  SNYK-JS-HTTPSPROXYAGENT-469131:
+    - snyk > proxy-agent > https-proxy-agent:
+        patched: '2019-10-04T01:40:49.357Z'
+    - '@google-cloud/vision > google-gax > google-auth-library > https-proxy-agent':
+        patched: '2019-10-04T01:40:49.357Z'
+    - snyk > proxy-agent > pac-proxy-agent > https-proxy-agent:
+        patched: '2019-10-04T01:40:49.357Z'
+    - '@google-cloud/vision > google-gax > google-auth-library > gaxios > https-proxy-agent':
+        patched: '2019-10-04T01:40:49.357Z'
+    - '@google-cloud/vision > google-gax > google-auth-library > gcp-metadata > gaxios > https-proxy-agent':
+        patched: '2019-10-04T01:40:49.357Z'
+    - '@google-cloud/vision > google-gax > google-auth-library > gtoken > gaxios > https-proxy-agent':
+        patched: '2019-10-04T01:40:49.357Z'
