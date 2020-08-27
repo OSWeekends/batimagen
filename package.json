@@ -35,7 +35,7 @@
   ],
   "license": "GPL-3.0",
   "dependencies": {
-    "@google-cloud/vision": "0.25.0",
+    "@google-cloud/vision": "2.0.0",
     "body-parser": "1.18.3",
     "express": "4.16.4",
     "express-fileupload": "1.0.0",
