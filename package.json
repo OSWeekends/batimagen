@@ -42,7 +42,7 @@
     "image-extensions": "1.1.0",
     "mime-types": "2.1.22",
     "node-exiftool": "2.3.0",
-    "node-virustotal": "2.4.2",
+    "node-virustotal": "2.5.0",
     "pug": "2.0.3",
     "uuid": "3.3.2",
     "snyk": "^1.193.0"
