@@ -45,7 +45,7 @@
     "node-virustotal": "2.4.2",
     "pug": "2.0.3",
     "uuid": "3.3.2",
-    "snyk": "^1.193.0"
+    "snyk": "^1.1024.0"
   },
   "snyk": true
 }
