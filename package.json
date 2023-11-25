@@ -38,14 +38,14 @@
     "@google-cloud/vision": "0.25.0",
     "body-parser": "1.18.3",
     "express": "4.16.4",
-    "express-fileupload": "1.0.0",
+    "express-fileupload": "1.4.0",
     "image-extensions": "1.1.0",
     "mime-types": "2.1.22",
     "node-exiftool": "2.3.0",
     "node-virustotal": "2.4.2",
     "pug": "2.0.3",
     "uuid": "3.3.2",
-    "snyk": "^1.193.0"
+    "snyk": "^1.685.0"
   },
   "snyk": true
 }
